@@ -13,6 +13,16 @@ class Testcredential(unittest.TestCase):
          '''
          self.new_credential = Credential("Julia","password")
     
+    def tearDown(self):
+        '''
+        clean up after running each test
+        '''
+        Credential.credential_list = []
+    
+    
+    
+    
+    
     def test__init__(self):
         
         '''
