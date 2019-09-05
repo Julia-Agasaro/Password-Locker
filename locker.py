@@ -11,11 +11,11 @@ class Credential:
         #instances
         self.user_name = user_name
         self.password = password
-#     def save_credentials(self):
-#         '''
-#         function which saves new created intances
-#         '''
-#         Credential.credential_list.append(self)
+     def save_credentials(self):
+        '''
+        function which saves new created intances
+        '''
+        Credential.credential_list.append(self)
 #      @classmethod
 #     def credential_exist(cls,user_name):
 #         '''
