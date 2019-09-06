@@ -11,11 +11,11 @@ class Credential:
         #instances
         self.user_name = user_name
         self.password = password
-     def save_credentials(self):
-        '''
-        function which saves new created intances
-        '''
-        Credential.credential_list.append(self)
+    #   def save_credentials(self):
+    #     '''
+    #     function which saves new created intances
+    #     '''
+    #     Credential.credential_list.append(self)
 #      @classmethod
 #     def credential_exist(cls,user_name):
 #         '''
@@ -25,15 +25,15 @@ class Credential:
 #             if credential.user_name==user_name:
 #                 return True
 #         return False
-#      @classmethod
-#     def authenticate_credential(cls, user_name, password):
-#         '''
-#         Method that checks if the username and password are correct
-#         '''
-#         for credential in cls.credential_list:
-#             if credential.user_name == user_name and credential.password == password:
-#                 return credential
-#         return 0
+      @classmethod
+      def authenticate_credential(cls, user_name, password):
+        '''
+        Method that checks if the username and password are correct
+        '''
+        for credential in cls.credential_list:
+            if credential.user_name == user_name and credential.password == password:
+                return credential
+        return 0
 
 # class User:
 #     '''

@@ -31,5 +31,13 @@ class Testcredential(unittest.TestCase):
         self.assertEqual(self.new_credential.user_name,'Julia')
         self.assertEqual(self.new_credential.password,'password')
 
+    def test_authentication(self):
+        '''
+        Tests proper autentication for log in purposes
+        '''
+        self.new_credential = Credential('Julia','password')
+        # self.new_credential.save_credential()
+        credential1 = Credential('Melissa','passwd')
+        # credential1.save_credential
 if __name__ == '__main__':
     unittest.main()
