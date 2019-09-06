@@ -1,7 +1,13 @@
 import unittest
+from locker import User
 from locker import Credential
 # from user import User
-
+class TestUser(unittest.TestCase):
+	'''
+	Test class that defines test cases for the user class behaviours.
+	Args:
+	    unittest.TestCase: helps in creating test cases
+	'''
 class Testcredential(unittest.TestCase):
     '''
     Test class that defines test cases for the credential class behaviours.
