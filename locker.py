@@ -18,15 +18,7 @@ class Credential:
         function which saves new created intances
         '''
         Credential.credential_list.append(self)
-#      @classmethod
-#     def credential_exist(cls,user_name):
-#         '''
-#         Method that checks if the username exist
-#         '''
-#         for credential in cls.credential_list:
-#             if credential.user_name==user_name:
-#                 return True
-#         return False
+
       @classmethod
       def authenticate_credential(cls, user_name, password):
         '''
@@ -36,6 +28,12 @@ class Credential:
             if credential.user_name == user_name and credential.password == password:
                 return credential
         return 0
+      def generating_password(size=10, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+		'''
+		Function to generate an 8 character password for a credential
+		'''
+		generate_password=''.join(random.choice(char) for _ in range(size))
+		return generate_password
 
 # class User:
 #     '''
