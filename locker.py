@@ -1,15 +1,18 @@
+import random
+import string
 
 class Credential:
       """
       Class for credentials, generate passwords and save passwords and user information
       """
       credential_list = []
-      def __init__(self,user_name,password):
+      def __init__(self,user_name, account_name,password):
         '''
         __init__ method that helps us define properties for our objects.
         '''
         #instances
         self.user_name = user_name
+        self.account_name = account_name
         self.password = password
      
      
@@ -19,21 +22,27 @@ class Credential:
         '''
         Credential.credential_list.append(self)
 
+      def generate_password(size=10, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
+          
+        '''
+		Function to generate an 8 character password for a credential
+		'''
+		
+        generate_password=''.join(random.choice(char) for _ in range(size))
+		
+        return generate_password
       @classmethod
-      def authenticate_credential(cls, user_name, password):
+      def authenticate_credential(cls, user_name, account_name, password):
         '''
         Method that checks if the username and password are correct
         '''
+        user = ''
         for credential in cls.credential_list:
             if credential.user_name == user_name and credential.password == password:
-                return credential
+                user = credential.user_name
+                return user
         return 0
-      def generating_password(size=10, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
-		'''
-		Function to generate an 8 character password for a credential
-		'''
-		generate_password=''.join(random.choice(char) for _ in range(size))
-		return generate_password
+      
 
 # class User:
 #     '''
