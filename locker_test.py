@@ -19,7 +19,15 @@ def test__init__(self):
 		'''
 		self.assertEqual(self.new_user.user_name,'Julia')
 		self.assertEqual(self.new_user.password,'pswd4')
+def save_user(self):
+		'''
+		Function to save a newly created user instance
+		'''
+		User.user_list.append(self)
 
+
+
+        #Second class : Credential
 class Testcredential(unittest.TestCase):
     '''
     Test class that defines test cases for the credential class behaviours.
