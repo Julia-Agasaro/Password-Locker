@@ -74,5 +74,28 @@ class Testcredential(unittest.TestCase):
 		
         self.assertEqual(len(Credential.credential_list),2)
 
+    def tearDown(self):
+        
+        '''
+	    Function to clear the credentials list after they have been tested
+		'''
+		
+        Credential.credential_list = []
+		# User.users_list = []
+
+    def test_display_credentials(self):
+		
+        '''
+		Test to check if the display_credentials method, displays the correct credentials.
+		'''
+		
+        self.new_credential.save_credentials()
+		
+        snapchat = Credential('agajulia4','snapchat','pswd4')
+		
+        snapchat.save_credentials()
+		
+        self.assertEqual(len(Credential.display_credentials(snapchat.user_name)),2)
+
 if __name__ == '__main__':
     unittest.main()
