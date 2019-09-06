@@ -36,8 +36,8 @@ class Testcredential(unittest.TestCase):
         Tests proper autentication for log in purposes
         '''
         self.new_credential = Credential('Julia','password')
-        # self.new_credential.save_credential()
+        self.new_credential.save_credentials()
         credential1 = Credential('Melissa','passwd')
-        # credential1.save_credential
+        credential1.save_credentials
 if __name__ == '__main__':
     unittest.main()
