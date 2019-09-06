@@ -8,6 +8,18 @@ class TestUser(unittest.TestCase):
 	Args:
 	    unittest.TestCase: helps in creating test cases
 	'''
+def setUp(self):
+		    '''
+		    Function to create a user account before each test
+		    '''
+		    self.new_user = User('Julia','pswd4')
+def test__init__(self):
+		'''
+		Test to if check the creation of user instances is done
+		'''
+		self.assertEqual(self.new_user.user_name,'Julia')
+		self.assertEqual(self.new_user.password,'pswd4')
+
 class Testcredential(unittest.TestCase):
     '''
     Test class that defines test cases for the credential class behaviours.
