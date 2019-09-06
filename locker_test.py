@@ -39,5 +39,14 @@ class Testcredential(unittest.TestCase):
         self.new_credential.save_credentials()
         credential1 = Credential('Melissa','passwd')
         credential1.save_credentials
+    def setUp(self):
+		'''
+		Function to create an account's credentials before each test
+		'''
+		self.new_credential = Credential('Julia','snapchat','agajulia4','pswd4')
+
+
+
+
 if __name__ == '__main__':
     unittest.main()
