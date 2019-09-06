@@ -19,11 +19,11 @@ class User:
 		
 		self.password = password
 
-	# def save_user(self):
-	# 	'''
-	# 	Function to save a newly created user instance
-	# 	'''
-	# 	User.users_list.append(self)
+	def save_user(self):
+		'''
+		Function to save a newly created user instance
+		'''
+		User.user_list.append(self)
 		
 class Credential:
       """
