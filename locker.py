@@ -1,6 +1,30 @@
 import random
 import string
+#Created a global variable which will be accessible to all functions
+global user_list 
+class User:
+	'''
+	Class to create user accounts and save his/her informations
+	'''
+	# Class Variables
+	# global user_list
+	user_list = []
+	def __init__(self,user_name,password):
+		'''
+		Method to define the properties for each user object will hold.
+		'''
 
+		# instance variables
+		self.user_name = user_name
+		
+		self.password = password
+
+	# def save_user(self):
+	# 	'''
+	# 	Function to save a newly created user instance
+	# 	'''
+	# 	User.users_list.append(self)
+		
 class Credential:
       """
       Class for credentials, generate passwords and save passwords and user information
