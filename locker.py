@@ -20,6 +20,7 @@ class User:
 		self.password = password
 
 	def save_user(self):
+   
 		'''
 		Function to save a newly created user instance
 		'''
@@ -30,6 +31,20 @@ class Credential:
       Class for credentials, generate passwords and save passwords and user information
       """
       credential_list = []
+	    
+      user_credentials_list = []
+      @classmethod
+      def authenticate_credential(cls, user_name, password):
+        '''
+        Method that checks if the username and password are correct
+        '''
+        user = ''
+        for user in User.user_list:
+            if (user.user_name == user_name and user.password == password):
+                user = user.user_name
+                return user
+        return 0
+
       def __init__(self,user_name, account_name,password):
         '''
         __init__ method that helps us define properties for our objects.
@@ -55,17 +70,7 @@ class Credential:
         generate_password=''.join(random.choice(char) for _ in range(size))
 		
         return generate_password
-      @classmethod
-      def authenticate_credential(cls, user_name, account_name, password):
-        '''
-        Method that checks if the username and password are correct
-        '''
-        user = ''
-        for credential in cls.credential_list:
-            if credential.user_name == user_name and credential.password == password:
-                user = credential.user_name
-                return user
-        return 0
+      
     
 
       @classmethod

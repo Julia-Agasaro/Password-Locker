@@ -24,7 +24,7 @@ class TestUser(unittest.TestCase):
   
 	def test_save_user(self):
 		'''
-		Test to check if the new users info is saved into the users list
+		Test to check if the new users informations are saved into the users list
 		'''
 		self.new_user.save_user()
 		self.assertEqual(len(User.user_list),1)
