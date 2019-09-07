@@ -24,7 +24,7 @@ In create Credential The user will also meet with the following commands:
 
 ## Technologies used:
 
-** python3.6**
+**python3.6**
 
 ## Running the Application
 
