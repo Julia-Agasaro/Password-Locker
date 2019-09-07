@@ -47,11 +47,11 @@ def display_credentials(user_name):
 	'''
 	return Credential.display_credentials(user_name)
 	
-def copy_credential(site_name):
+def delete_credential(site_name):
 	'''
 	Function to copy a credentials details to the clipboard
 	'''
-	return Credential.copy_credential(site_name)
+	return Credential.delete_credential(site_name)
 
 def main():
 	print(' ')
@@ -114,7 +114,7 @@ def main():
 							elif psw_choice == 'ex':
 								break
 							else:
-								print('Oops! Wrong option entered. Try again.')
+								print('Oops! Sorry the option entered is wrong. Try again.')
 						save_credential(create_credential(user_name,account_name,password))
 						print(' ')
 						print(f'Credential Created:Site Name: {site_name} - Account Name: {account_name} - Password: {password}')
@@ -131,22 +131,22 @@ def main():
 							print(' ')
 							print("You don't seem to have any credentials saved yet")
 							print(' ')
-					elif short_code == 'copy':
+					elif short_code == 'DC':
 						print(' ')
-						chosen_site = input('Enter the site name for the credential password to copy: ')
-						copy_credential(chosen_site)
+						chosen_site = input('Enter the site name for the credential password to delete: ')
+						delete_credential(chosen_site)
 						print('')
 					else:
-						print('Oops! Wrong option entered. Try again.')
+						print('Oops! Sorry the option entered is wrong Try again.')
 
 			else: 
 				print(' ')
-				print('Oops! Wrong details entered. Try again or Create an Account.')		
+				print('Oops! Sorry the option entered is wrong. Try again or Create an Account.')		
 		
 		else:
 			print("-"*60)
 			print(' ')
-			print('Oops! Wrong option entered. Try again.')
+			print('Oops! Sorry the option entered is wrong. Try again.')
 				
 
 

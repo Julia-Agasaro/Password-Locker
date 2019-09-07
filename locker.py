@@ -72,6 +72,12 @@ class Credential:
         return generate_password
       
     
+	    def delete_credential(self):
+		  '''
+		  function  that deletes  credentials  that are no longer needed in the application.
+
+		  '''
+	  	User.user_list.remove(self)  
 
       @classmethod
 	  
@@ -91,16 +97,4 @@ class Credential:
 		
         return user_credential_list
 
-# class User:
-#     '''
-#     class that generates new instances of the user 
-#     '''
-#      user_list = []
-    
-#     def __init__(self, account_name,account_username, account_password):
-#         '''
-#         Class to create user accounts and save their information
-#         '''
-#         self.acc_name = account_name
-#         self.acc_username =  account_username
-#         self.acc_password = account_password
+     
