@@ -86,7 +86,7 @@ def main():
 				print(' ')
 				while True:
 					print("*"*60)
-					print('Navigation codes: \n cc-Create a Credential \n dc-Display Credentials \n copy-Copy Password \n ex-Exit')
+					print('Navigation codes: \n cc-Create a Credential \n dc-Display Credentials \n Delete- Delete Credential \n ex-Exit')
 					short_code = input('Enter a choice: ').lower().strip()
 					print("*"*60)
 					if short_code == 'ex':
@@ -131,7 +131,7 @@ def main():
 							print(' ')
 							print("You don't seem to have any credentials saved yet")
 							print(' ')
-					elif short_code == 'DC':
+					elif short_code == 'Delete':
 						print(' ')
 						chosen_site = input('Enter the site name for the credential password to delete: ')
 						delete_credential(chosen_site)

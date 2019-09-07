@@ -2,6 +2,9 @@ import random
 import string
 #Created a global variable which will be accessible to all functions
 global user_list 
+
+         #First class for User
+
 class User:
 	'''
 	Class to create user accounts and save his/her informations
@@ -26,6 +29,9 @@ class User:
 		'''
 		User.user_list.append(self)
 		
+
+    # Second Class  For Credential
+
 class Credential:
       """
       Class for credentials, generate passwords and save passwords and user information
@@ -64,20 +70,23 @@ class Credential:
       def generate_password(size=10, char=string.ascii_uppercase+string.ascii_lowercase+string.digits):
           
         '''
-		Function to generate an 8 character password for a credential
-		'''
+		    Function to generate an 8 character password for a credential
+		    '''
 		
         generate_password=''.join(random.choice(char) for _ in range(size))
 		
         return generate_password
       
     
-	    def delete_credential(self):
-		  '''
-		  function  that deletes  credentials  that are no longer needed in the application.
+    
+      # def delete_credential(self):
+		  
+      # '''
+		  # function  that deletes  credentials  that are no longer needed in the application.
 
-		  '''
-	  	User.user_list.remove(self)  
+      # '''
+	  	
+      # User.user_list.remove(self)  
 
       @classmethod
 	  
