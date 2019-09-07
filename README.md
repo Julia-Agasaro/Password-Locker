@@ -38,5 +38,5 @@ To run the application, in your terminal:
 1. Deleting credentials account  in the application
 2. Storing passwords that even if i close the terminal or stop running the app once the user logs in, the user can always find his/her passwords.
  
-**Contact**
+## Contact
 If you run into any issues or have questions, ideas or concerns. Contact me or make a contribution to the code. Email :agasarojulia@gmail.com ,Github username:Julia-Agasaro.
